@@ -13,6 +13,8 @@ struct HistoryView: View {
         VStack {
             ContentHeaderView()
             PageTitleView(title: "Pizza History")
+            SelectedImageView(image: "1_250w")
+                .padding(5)
             HistoryListView()
         }
     }
@@ -26,6 +28,5 @@ struct HistoryView_Previews: PreviewProvider {
                 .colorScheme(.dark)
                 .background(Color.black)
         }
-        
     }
 }
