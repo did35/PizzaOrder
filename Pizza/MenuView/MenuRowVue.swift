@@ -12,9 +12,13 @@ struct MenuRowVue: View {
     var body: some View {
         HStack(alignment: .top, spacing: 15) {
             Image("1_100w")
-            VStack {
+//                .cornerRadius(10)
+//                .border(Color("G4"), width: 2)
+                .clipShape(Capsule())
+                .shadow(color: Color.black.opacity(0.5), radius: 5, x: 5, y: 5)
+            VStack(alignment: .leading) {
                 Text("Huli chicken pizza")
-                    .font(.title)
+                    .font(.system(size: 20))
                     .fontWeight(.light)
                 RatingsView()
             }

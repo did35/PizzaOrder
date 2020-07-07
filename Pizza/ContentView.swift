@@ -12,10 +12,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             ContentHeaderView()
+                .layoutPriority(2)
             PageTitleView(title: "Order Pizza")
             MenuListView()
+                .layoutPriority(1)
             OrderListView()
-            Spacer()
+            .layoutPriority(1)
+            //Spacer()
         }.padding()
     }
 }
