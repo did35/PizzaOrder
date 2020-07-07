@@ -14,6 +14,8 @@ struct MenuRowVue: View {
             Image("1_100w")
             VStack {
                 Text("Huli chicken pizza")
+                    .font(.title)
+                    .fontWeight(.light)
                 RatingsView()
             }
             Spacer()
@@ -24,6 +26,7 @@ struct MenuRowVue: View {
 struct MenuRowVue_Previews: PreviewProvider {
     static var previews: some View {
         MenuRowVue()
+        
     }
 }
 
