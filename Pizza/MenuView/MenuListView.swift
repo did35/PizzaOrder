@@ -9,11 +9,13 @@
 import SwiftUI
 
 struct MenuListView: View {
+    var menu = MenuModel().menu
     var body: some View {
         VStack {
             ListHeaderView(text: "Menu")
-            List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+            List(menu) { item in
                 MenuRowVue()
+                Text(item.name)
             }
         }
     }
