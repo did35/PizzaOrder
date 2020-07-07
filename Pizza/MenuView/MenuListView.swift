@@ -14,8 +14,8 @@ struct MenuListView: View {
         VStack {
             ListHeaderView(text: "Menu")
             List(menu) { item in
-                MenuRowVue()
-                Text(item.name)
+                MenuRowVue(menuItem: item)
+                .listRowInsets(EdgeInsets())
             }
         }
     }
