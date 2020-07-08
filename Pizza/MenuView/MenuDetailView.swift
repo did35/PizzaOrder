@@ -9,7 +9,8 @@
 import SwiftUI
 ///A `View`for entering in an order. Takes basic information about the order from `menuItem`
 struct MenuDetailView: View {
-    @Binding var orderModel: OrderModel
+    @EnvironmentObject var settings: UserPreferences
+    @ObservedObject var orderModel: OrderModel
     
     var menuItem: MenuItem
     var formattedPrice: String {
@@ -37,7 +38,7 @@ struct MenuDetailView: View {
             HStack{
                 Spacer()
                 Text("Pizza size")
-                Text("Small")
+                Text(settings.size.formatted())
             }
             .font(.headline)
             HStack{
@@ -78,6 +79,6 @@ struct MenuDetailView: View {
 struct MenuDetailView_Previews: PreviewProvider {
     static var previews: some View {
         // preview does not like pointers, so you need to give a constant right at the start.
-        MenuDetailView(orderModel: .constant(OrderModel()), menuItem: testMenuItem)
+        MenuDetailView(orderModel: OrderModel(), menuItem: testMenuItem)
     }
 }

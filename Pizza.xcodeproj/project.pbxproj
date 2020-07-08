@@ -29,6 +29,7 @@
 		63DF2C9D24B1BC970086B943 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DF2C9C24B1BC970086B943 /* OrderListView.swift */; };
 		63DF2C9F24B1BD600086B943 /* MenuListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DF2C9E24B1BD600086B943 /* MenuListView.swift */; };
 		63DF2CA124B1BE280086B943 /* ContentHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DF2CA024B1BE280086B943 /* ContentHeaderView.swift */; };
+		63FBC98024B5B0E800E09FB0 /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC97F24B5B0E800E09FB0 /* HistoryDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		63DF2C9C24B1BC970086B943 /* OrderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
 		63DF2C9E24B1BD600086B943 /* MenuListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListView.swift; sourceTree = "<group>"; };
 		63DF2CA024B1BE280086B943 /* ContentHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentHeaderView.swift; sourceTree = "<group>"; };
+		63FBC97F24B5B0E800E09FB0 /* HistoryDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				63DC101324B22350002A2FA3 /* HistoryView.swift */,
 				63DC100F24B21DE8002A2FA3 /* HistoryListView.swift */,
 				63DC101124B22062002A2FA3 /* HistoryRowView.swift */,
+				63FBC97F24B5B0E800E09FB0 /* HistoryDetailView.swift */,
 			);
 			path = HistoryView;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			files = (
 				6371950C24B4AD46005E6E46 /* OrderModel.swift in Sources */,
 				6371950924B4AD35005E6E46 /* HistoryModel.swift in Sources */,
+				63FBC98024B5B0E800E09FB0 /* HistoryDetailView.swift in Sources */,
 				6371950F24B4B652005E6E46 /* MenuDetailView.swift in Sources */,
 				6371950D24B4AD46005E6E46 /* MenuModel.swift in Sources */,
 				63DC101224B22062002A2FA3 /* HistoryRowView.swift in Sources */,
