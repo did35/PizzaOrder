@@ -5,4 +5,4 @@
 @Published, @State, @ObservedObject, @ObjectBinding and @EnvironmentObject are discussed.</p>
 <p>Link to the tutorial: https://www.linkedin.com/learning/swiftui-essential-training/</p>
 <h2>Screenshot:</h2>
-<img src = "Image/screenshot" width= "300px" height= "600px" />
+<img src = "Image/screenshot.png" width= "300px" height= "600px" />
