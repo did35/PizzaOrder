@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct HistoryView: View {
-    @State var imageID = 0
+    @State private var imageID = 0
     var body: some View {
         VStack {
             //ContentHeaderView()
