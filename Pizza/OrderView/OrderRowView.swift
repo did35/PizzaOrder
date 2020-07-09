@@ -11,12 +11,16 @@ import SwiftUI
 struct OrderRowView: View {
     var orderItem: OrderItem
     var body: some View {
-        HStack(alignment: .firstTextBaseline) {
-            Text(orderItem.description)
-                .font(.headline)
-            Spacer()
-            Text(orderItem.formattedExtendedPrice)
-                .bold()
+        VStack {
+            HStack(alignment: .firstTextBaseline) {
+                Image(systemName: "\(orderItem.id).square")
+                Text(orderItem.description)
+                    .font(.headline)
+                Spacer()
+                Text(orderItem.formattedExtendedPrice)
+                    .bold()
+            }
+            Text(orderItem.comments)
         }
     }
 }
@@ -24,6 +28,6 @@ struct OrderRowView: View {
 struct OrderRowView_Previews: PreviewProvider {
     static var previews: some View {
         OrderRowView(orderItem: testOrderItem)
-            .environment(\.sizeCategory, .accessibilityExtraExtraLarge)
+            //.environment(\.sizeCategory, .accessibilityExtraExtraLarge)
     }
 }

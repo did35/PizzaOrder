@@ -14,6 +14,7 @@ struct ConfirmView: View {
     @ObservedObject var orderModel:OrderModel
     @Binding var quantity: Int
     @Binding var size: Size
+    @State private var comments = ""
     
     ///extracts the menu item name based on `menuID`
     var name:String{
@@ -21,7 +22,7 @@ struct ConfirmView: View {
     }
     
     func addItem(){
-        orderModel.add(menuID: menuID, size: size, quantity: quantity)
+        orderModel.add(menuID: menuID, size: size, quantity: quantity, comments: comments)
         isPresented = false
     }
     
@@ -41,6 +42,9 @@ struct ConfirmView: View {
             Divider()
             Text("Confirm your order of \(quantity) \(size.formatted()) \(name) pizza")
                 .font(.headline)
+            TextField("Add your comment here", text: $comments)
+                .background(Color("G2"))
+                
             Spacer()
             HStack {
                 Button(action: addItem){
