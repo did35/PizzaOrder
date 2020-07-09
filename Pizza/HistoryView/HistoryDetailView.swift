@@ -15,8 +15,13 @@ struct HistoryDetailView: View {
         imageID = historyItem.id
         return VStack {
             PageTitleView(title: historyItem.name)
-            Text(historyItem.history)
-                .frame(height:300)
+            ScrollView(showsIndicators: true) {
+                Text(historyItem.history)
+                .lineLimit(nil)
+                //.frame(height:400)
+                    .padding(5)
+                
+            }
             Spacer()
         }
     }
