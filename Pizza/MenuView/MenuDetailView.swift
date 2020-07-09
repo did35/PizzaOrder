@@ -9,6 +9,7 @@
 import SwiftUI
 ///A `View`for entering in an order. Takes basic information about the order from `menuItem`
 struct MenuDetailView: View {
+    let sizes:[Size] = [.small, .medium, .large]
     @EnvironmentObject var settings: UserPreferences
     @ObservedObject var orderModel: OrderModel
     @State private var didOrder = false
@@ -16,7 +17,7 @@ struct MenuDetailView: View {
     
     var menuItem: MenuItem
     var formattedPrice: String {
-        String(format:"%3.2f", menuItem.price * Double(quantity))
+        String(format:"%3.2f", menuItem.price * Double(quantity) * settings.size.rawValue)
     }
     func addItem(){
 //        orderModel.add(menuID: menuItem.id)
@@ -36,11 +37,17 @@ struct MenuDetailView: View {
                 .layoutPriority(3)
                 
             Spacer()
-            HStack{
-                Spacer()
-                Text("Pizza size")
-                Text(settings.size.formatted())
+            Picker(selection: $settings.size, label: Text("Pizza Size")) {
+                ForEach(sizes, id: \.self) { size in
+                    Text(size.formatted()).tag(size)
+                }
             }
+            .pickerStyle(SegmentedPickerStyle())
+//            HStack{
+//                Spacer()
+//                Text("Pizza size")
+//                Text(settings.size.formatted())
+//            }
             .font(.headline)
             Stepper(value: $quantity, in: 1...10) {
                 Text("Quantity: \(quantity)")
@@ -76,7 +83,7 @@ struct MenuDetailView: View {
 //                    Alert(title: Text("Pizza Ordered"), message: Text("You ordered a " + self.menuItem.name), dismissButton: nil)
 //                }
                     .sheet(isPresented: $didOrder) {
-                        ConfirmView(menuID: self.menuItem.id, isPresented: self.$didOrder, orderModel: self.orderModel, quantity: self.$quantity)
+                        ConfirmView(menuID: self.menuItem.id, isPresented: self.$didOrder, orderModel: self.orderModel, quantity: self.$quantity, size: self.$settings.size)
                     }
                 Spacer()
             }
