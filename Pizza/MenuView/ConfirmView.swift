@@ -38,6 +38,16 @@ struct ConfirmView: View {
                 .padding(.leading)
             Divider()
             SelectedImageView(image: "\(menuID)_250w")
+                // One way to dismiss
+//                .onTapGesture(count: 2) {
+//                    self.isPresented = false
+//            }
+                // Second way to dismiss which is more generic
+            .gesture(TapGesture(count: 2)
+                .onEnded {
+                    self.isPresented = false
+                }
+            )
                 .padding(10)
             Divider()
             Text("Confirm your order of \(quantity) \(size.formatted()) \(name) pizza")
