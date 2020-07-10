@@ -38,7 +38,6 @@ class HistoryModel{
     
 }
 
-
 let data = """
 {"items":[
     {"id":0,"name":"Margherita","latitude":40.8371,"longitude":14.2467,"history":"Street Food Nationalized - The legend goes that King Umberto and Queen Margherita of Italy got tired of the royal food, which was always French. Looking for both something new and something Italian, while in Naples they ordered a local pizzeria to make them pizza, which was up until then considered a food for the poor. The Queen loved a pizza of tomatoes, fresh mozzarella, and basil so much the restaurant named the pizza after her. That the pizza was the colors of the Italian flag may not be a coincidence. To this day, to sell a true Neapolitan pizza, you must be certified by an association of pizza restaurants in Naples for the process and for the quality of ingredients."},

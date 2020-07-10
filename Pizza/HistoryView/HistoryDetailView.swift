@@ -17,7 +17,7 @@ struct HistoryDetailView: View {
         return VStack {
             PageTitleView(title: historyItem.name)
             MapView(latitude: historyItem.latitude, longitude: historyItem.longitude, regionRadius: 1000000)
-                .frame(height: 100)
+                .frame(height: 70)
             PresentMapButton(isPresented: $isPresented, historyItem: historyItem)
             ScrollView(showsIndicators: true) {
                 Text(historyItem.history)

@@ -15,6 +15,7 @@ struct SelectedImageView: View {
             Image(image)
             .resizable()
             .scaledToFit()
+                //.frame(height: 150)
                 .cornerRadius(30)
                 .shadow(color: .black, radius: 10, x: 5, y: 5)
         }
