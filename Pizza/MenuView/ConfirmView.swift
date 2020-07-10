@@ -26,10 +26,6 @@ struct ConfirmView: View {
         isPresented = false
     }
     
-    func dismissItem() {
-        isPresented = false
-    }
-    
     var body: some View {
         VStack{
             Text("Confirm Order")
@@ -54,6 +50,8 @@ struct ConfirmView: View {
                 .font(.headline)
             TextField("Add your comment here", text: $comments)
                 .background(Color("G2"))
+            SizePickerView(size: $size)
+            QuantityStepperView(quantity: $quantity)
                 
             Spacer()
             HStack {
@@ -63,16 +61,16 @@ struct ConfirmView: View {
                     .padding()
                     .background(Color("G4"))
                     .cornerRadius(10)
-                }.padding([.bottom])
-                Button(action: dismissItem){
-                    Text("Dismiss")
+                }
+                Spacer()
+                Button(action: {self.isPresented = false}){
+                    Text("Cancel")
                         .font(.title)
                     .padding()
                     .background(Color("G4"))
                     .cornerRadius(10)
-                }.padding([.bottom])
-            }
-            
+                }
+            }.padding([.leading, .trailing, .bottom])
         }
         .background(Color("G3"))
         .foregroundColor(Color("IP"))
