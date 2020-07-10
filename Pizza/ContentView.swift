@@ -14,8 +14,8 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-//            ContentHeaderView()
-//                .layoutPriority(2)
+            //            ContentHeaderView()
+            //                .layoutPriority(2)
             Button(action: {self.isMenuDisplayed.toggle()}) {
                 PageTitleView(title: "Order Pizza", isDisplayingOrders: isMenuDisplayed)
             }
@@ -24,7 +24,9 @@ struct ContentView: View {
                 .layoutPriority(isMenuDisplayed ? 1.0 : 0.5)
             OrderListView(orderModel: orderModel )
                 .layoutPriority(isMenuDisplayed ? 0.5 : 1.0)
-        }.padding()
+            .animation(.spring())
+        }
+        .padding()
     }
 }
 
