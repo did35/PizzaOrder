@@ -9,14 +9,23 @@
 import SwiftUI
 
 struct OrderListView: View {
-    var orderModel: OrderModel
+    @ObservedObject var orderModel: OrderModel
     var body: some View {
         VStack {
-            ListHeaderView(orderModel: orderModel, text: "Your Order")
-            List(orderModel.orders){item in
-                OrderRowView(orderItem: item)
+            
+            List {
+                Section(header: ListHeaderView(orderModel: self.orderModel, text: "Your Order")) {
+                    ForEach(orderModel.orders) { item in
+                        OrderRowView(orderItem: item)
+                    }
+                    .onDelete(perform: delete)
+                }
             }
         }
+    }
+    // You have to write it yourself
+    func delete(at offsets: IndexSet) {
+        orderModel.orders.remove(atOffsets: offsets)
     }
 }
 
