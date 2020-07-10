@@ -5,7 +5,8 @@
 <p>Link to the tutorial: https://www.linkedin.com/learning/swiftui-essential-training/</p>
 <h2>Screenshots:</h2>
 <p float="left">
-  <img src = "Image/screenshot_1.png" width= "30%" /> 
-  <img src = "Image/screenshot_2.png" width= "30%" /> 
-  <img src = "Image/screenshot_3.png" width= "30%" />
+  <img src = "Image/screenshot_1.png" width= "24%" /> 
+  <img src = "Image/screenshot_2.png" width= "24%" /> 
+  <img src = "Image/screenshot_3.png" width= "24%" />
+  <img src = "Image/screenshot_4.png" width= "24%" />
 </p>
